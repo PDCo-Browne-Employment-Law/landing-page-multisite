@@ -44,8 +44,14 @@ add_filter('menu_order', 'gfm_custom_menu_order');
 // Remove unnecessary admin items
 add_action('admin_menu', 'gfm_remove_menus');
 
+echo '<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery("#toplevel_page_wpe-user-portal").remove();
+	});
+</script>';
+
 function gfm_remove_menus() {
-	//remove_menu_page('edit-comments.php');
-	//remove_menu_page('tools.php');
-	//remove_menu_page('themes.php');
+	remove_menu_page('edit-comments.php');
+	remove_menu_page('tools.php');
+	remove_menu_page('themes.php');
 }

@@ -1,0 +1,45 @@
+@use 'includes/functions' as f;
+
+// Gaps
+$column-gap-large: f.rem-calc(35);
+$column-gap-small: f.rem-calc(20);
+
+// Offsets
+$offset-top-small: f.rem-calc(-5);
+
+// Border radius
+$border-radius-xlarge: f.rem-calc(100);
+$border-radius-large: f.rem-calc(20);
+$border-radius-small: f.rem-calc(8);
+
+// Depth
+$box-shadow-strong: 0px 6px 14px 0px rgba(0, 0, 0, 0.1);
+
+// Mixins
+@mixin container-max {
+  max-width: f.rem-calc(1335);
+  margin: 0 auto;
+  padding: 0 f.rem-calc(50);
+  @media (max-width: 767px) {
+    padding: 0 f.rem-calc(20);
+  }
+}
+@mixin container-lrg {
+  max-width: f.rem-calc(750);
+}
+
+/* Helpers
+-------------------------------------------------------------- */
+
+// Containers
+.container-max {
+  @include container-max();
+}
+.container-lrg {
+  @include container-lrg();
+}
+
+// Offsets
+.offset-top-small {
+  margin-top: f.rem-calc(-5);
+}

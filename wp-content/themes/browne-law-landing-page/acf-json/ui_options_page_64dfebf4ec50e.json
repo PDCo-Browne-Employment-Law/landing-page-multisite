@@ -1,0 +1,22 @@
+{
+    "key": "ui_options_page_64dfebf4ec50e",
+    "title": "Contact Info.",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Contact Info.",
+    "menu_slug": "contact-info",
+    "parent_slug": "none",
+    "advanced_configuration": 1,
+    "icon_url": "dashicons-info",
+    "menu_title": "Contact Info.",
+    "position": "",
+    "redirect": 0,
+    "description": "Contact info for all sites in the network.",
+    "update_button": "Update",
+    "updated_message": "Options Updated",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1692396626
+}

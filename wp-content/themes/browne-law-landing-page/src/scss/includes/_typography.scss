@@ -1,0 +1,106 @@
+@use 'includes/functions' as f;
+@use 'colors' as c;
+
+// Define font families
+$primary-font: 'Libre Baskerville', serif;
+$secondary-font: 'Poppins', sans-serif;
+
+// Font vars
+$weight-normal: 400;
+
+// Base typography
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: $primary-font;
+  line-height: f.rem-calc(24);
+  color: c.$deep-blue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $secondary-font;
+  margin-top: 0;
+  margin-bottom: f.rem-calc(18);
+  font-weight: $weight-normal;
+}
+
+h1 {
+  font-size: f.rem-calc(60);
+  line-height: 120%;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: f.rem-calc(40);
+  line-height: 125%;
+  margin-bottom: f.rem-calc(30);
+  @media (max-width: 767px) {
+    font-size: f.rem-calc(32);
+    line-height: f.rem-calc(46);
+  }
+}
+
+h3 {
+  font-size: f.rem-calc(28);
+  line-height: 114%;
+  margin: f.rem-calc(43) 0;
+  font-weight: 600;
+  @media (max-width: 767px) {
+    font-size: f.rem-calc(20);
+    line-height: f.rem-calc(32);
+    margin: f.rem-calc(30) 0;
+  }
+}
+
+h4 {
+  margin: f.rem-calc(30) 0 f.rem-calc(10) 0;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: f.rem-calc(20);
+}
+
+ul,
+ol {
+  margin-bottom: f.rem-calc(35);
+  padding-left: f.rem-calc(21);
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  margin-bottom: f.rem-calc(10);
+}
+
+a {
+  color: c.$deep-blue;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+em,
+i {
+  font-style: italic;
+}

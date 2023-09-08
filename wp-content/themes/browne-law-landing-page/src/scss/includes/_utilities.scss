@@ -1,0 +1,57 @@
+@use 'includes/functions' as f;
+@use 'includes/colors' as c;
+@use 'includes/typography' as t;
+@use 'includes/structure' as s;
+
+// Buttons
+.btn {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 f.rem-calc(24);
+  height: f.rem-calc(56);
+  border-radius: s.$border-radius-xlarge;
+  text-decoration: none;
+  font-family: t.$secondary-font;
+  font-weight: 600;
+  line-height: 1;
+  transition: all 0.5s cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  &:hover {
+    text-decoration: none;
+  }
+  &-white {
+    background-color: c.$white;
+    &:hover {
+      background-color: c.$deep-blue;
+      color: c.$white;
+    }
+  }
+}
+
+.cta-button {
+  font-family: t.$secondary-font;
+  font-size: f.rem-calc(18);
+  line-height: f.rem-calc(18);
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: max-content;
+  max-width: 100%;
+  &:after {
+    content: url(../assets/svg/button-arrow.svg);
+    margin-left: f.rem-calc(8);
+    transform: translateX(0);
+    transition: all 0.5s cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    position: relative;
+    top: f.rem-calc(-1);
+  }
+  &:hover {
+    text-decoration: none;
+    &:after {
+      transform: translateX(5px);
+    }
+  }
+}

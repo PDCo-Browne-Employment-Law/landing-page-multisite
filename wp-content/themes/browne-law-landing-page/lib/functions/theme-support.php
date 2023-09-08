@@ -45,7 +45,7 @@ add_filter('menu_order', 'gfm_custom_menu_order');
 add_action('admin_menu', 'gfm_remove_menus');
 
 function gfm_remove_menus() {
-	remove_menu_page('edit-comments.php');
-	remove_menu_page('tools.php');
-	remove_menu_page('themes.php');
+	//remove_menu_page('edit-comments.php');
+	//remove_menu_page('tools.php');
+	//remove_menu_page('themes.php');
 }
